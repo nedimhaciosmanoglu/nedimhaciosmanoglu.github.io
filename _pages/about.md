@@ -42,4 +42,7 @@ My work spans the de novo design of biological systems to bio-electronic or 3D p
 I have contributed to numerous successful grant proposals and thrive in collaborative environments that tackle ambitious scientific challenges.
 
 
+In my free time, I enjoy exploring musical genres, building DIY devices, and exploring nature.
+
+
 Feel free to explore my web page!

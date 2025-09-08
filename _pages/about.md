@@ -9,15 +9,17 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p> UNAM Building </p>
-    <p> Bilkent University </p>
-    <p> Main Campus </p>
-    <p> Ankara, 06800, Türkiye </p>
+
+<p style="text-align: center;">UNAM Building</p>
+<p style="text-align: center;">Bilkent University</p>
+<p style="text-align: center;">Main Campus</p>
+<p style="text-align: center;">Ankara, 06800, Türkiye</p>
 
 selected_papers:
   enabled: true
   scrollable: true
   limit: 5
+
 social: true # includes social icons at the bottom of the page
 
 announcements:

@@ -15,11 +15,6 @@ profile:
     <p> Ankara, 06800, Türkiye </p>
 
 selected_papers: false
-  enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new post items
-  limit: 3 # leave blank to include all the blog posts
-
-
 social: true # includes social icons at the bottom of the page
 
 announcements:

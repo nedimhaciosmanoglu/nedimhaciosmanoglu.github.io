@@ -10,14 +10,12 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
 
-<div style="text-align: center;">
 
 <p> UNAM Building </p>
 <p> Bilkent University </p>
 <p> Main Campus </p>
 <p>Ankara, 06800, Türkiye</p>
 
-</div>
 
 
 selected_papers:

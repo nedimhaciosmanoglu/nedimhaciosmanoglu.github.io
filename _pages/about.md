@@ -12,7 +12,7 @@ profile:
 
 <div style="text-align: center;">
 
-  <p> UNAM Building </p>
+<p> UNAM Building </p>
 <p> Bilkent University </p>
 <p> Main Campus </p>
 <p>Ankara, 06800, Türkiye</p>

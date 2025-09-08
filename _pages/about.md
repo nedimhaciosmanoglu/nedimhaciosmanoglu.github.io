@@ -1,6 +1,6 @@
 ---
-layout: about
-title: about
+layout: About
+title: About
 permalink: /
 subtitle: <a href='#'>Bilkent University, Postdoctoral Researcher</a>. National Institute of Materials Science and Nanotechnology
 

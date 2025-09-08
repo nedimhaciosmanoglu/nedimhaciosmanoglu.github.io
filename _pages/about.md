@@ -8,14 +8,14 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
+  more_info: |
 
-
+<div style="text-align: justify;">
   <p> UNAM Building </p>
   <p> Bilkent University </p>
   <p> Main Campus </p>
   <p> Ankara, 06800, Türkiye </p>
-
+</div>
 
 
 selected_papers:

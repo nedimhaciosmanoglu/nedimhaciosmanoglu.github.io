@@ -10,7 +10,8 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p> UNAM Building </p>
-    <p> Bilkent University, Main Campus </p>
+    <p> Bilkent University </p>
+    <p> Main Campus </p>
     <p> Ankara, 06800, Türkiye </p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"

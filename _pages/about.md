@@ -27,7 +27,12 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+
 <div style="text-align: justify;">
+  
+  
+  
   <p>I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research.</p>
 
   <p>My work spans the de novo design of biological systems to bio-electronic or 3D printed interfaces, resulting in multiple publications and recognition in national/international projects.</p>

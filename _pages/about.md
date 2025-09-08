@@ -27,18 +27,14 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-<p style="text-align: justify;">
-I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research. 
+<div style="text-align: justify;">
+  <p>I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research.</p>
 
+  <p>My work spans the de novo design of biological systems to bio-electronic or 3D printed interfaces, resulting in multiple publications and recognition in national/international projects.</p>
 
-My work spans the de novo design of biological systems to bio-electronic or 3D printed interfaces, resulting in multiple publications and recognition in national/international projects. 
+  <p>I have contributed to numerous successful grant proposals and thrive in collaborative environments that tackle ambitious scientific challenges.</p>
 
+  <p>In my free time, I enjoy exploring musical genres, building DIY devices, and exploring nature.</p>
 
-I have contributed to numerous successful grant proposals and thrive in collaborative environments that tackle ambitious scientific challenges.
-
-
-In my free time, I enjoy exploring musical genres, building DIY devices, and exploring nature.
-
-
-Feel free to explore my web page!
-</p>
+  <p>Feel free to explore my web page!</p>
+</div>

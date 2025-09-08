@@ -14,7 +14,10 @@ profile:
     <p> Main Campus </p>
     <p> Ankara, 06800, Türkiye </p>
 
-selected_papers: true
+selected_papers:
+  enabled: true
+  scrollable: true
+  limit: 5
 social: true # includes social icons at the bottom of the page
 
 announcements:

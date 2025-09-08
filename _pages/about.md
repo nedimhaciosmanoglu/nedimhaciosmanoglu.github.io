@@ -2,45 +2,39 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Bilkent University, Postdoctoral Researcher</a>. National Institute of Materials Science and Nanotechnology
+subtitle: "Bilkent University, Postdoctoral Researcher. National Institute of Materials Science and Nanotechnology"
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: |
-
-<div style="text-align: justify;">
-  <p> UNAM Building </p>
-  <p> Bilkent University </p>
-  <p> Main Campus </p>
-  <p> Ankara, 06800, Türkiye </p>
-</div>
-
+    <div style="text-align: justify;">
+      <p>UNAM Building</p>
+      <p>Bilkent University</p>
+      <p>Main Campus</p>
+      <p>Ankara, 06800, Türkiye</p>
+    </div>
 
 selected_papers:
   enabled: true
   scrollable: true
   limit: 5
 
-social: true # includes social icons at the bottom of the page
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-
 <div style="text-align: justify;">
-  
-  
-  
   <p>I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research.</p>
 
   <p>My work spans the de novo design of biological systems to bio-electronic or 3D printed interfaces, resulting in multiple publications and recognition in national/international projects.</p>

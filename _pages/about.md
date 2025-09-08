@@ -27,7 +27,7 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-
+<p style="text-align: justify;">
 I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research. 
 
 
@@ -41,3 +41,4 @@ In my free time, I enjoy exploring musical genres, building DIY devices, and exp
 
 
 Feel free to explore my web page!
+</p>

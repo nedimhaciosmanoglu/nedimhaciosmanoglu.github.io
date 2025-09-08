@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  description: |
+  more_info: >
     <p>UNAM Building</p>
     <p>Bilkent University</p>
     <p>Main Campus</p>

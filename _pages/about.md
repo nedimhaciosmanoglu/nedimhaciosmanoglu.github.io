@@ -15,7 +15,6 @@ profile:
     <p> Ankara, 06800, Türkiye </p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
 social: true # includes social icons at the bottom of the page
 
 announcements:

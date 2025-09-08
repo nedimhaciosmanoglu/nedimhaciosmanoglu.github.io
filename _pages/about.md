@@ -14,7 +14,12 @@ profile:
     <p> Main Campus </p>
     <p> Ankara, 06800, Türkiye </p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 3 # leave blank to include all the blog posts
+
+
 social: true # includes social icons at the bottom of the page
 
 announcements:

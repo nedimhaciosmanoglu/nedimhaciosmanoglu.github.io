@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: "<strong>About</strong>"
 permalink: /
 subtitle: "<a href='#'><strong>Bilkent University, Postdoctoral Researcher</strong></a>, <strong>National Institute of Materials Science and Nanotechnology</strong>"
 

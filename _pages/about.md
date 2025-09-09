@@ -19,7 +19,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-<div style="text-align: justify;">
+<div style="text-align: justify; padding-top: 50px;">
   <p>I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research.</p>
 
   <p>My work spans the de novo design of biological systems to bio-electronic or 3D printed interfaces, resulting in multiple publications and recognition in national/international projects.</p>

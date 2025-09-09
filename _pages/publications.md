@@ -19,5 +19,6 @@ nav_order: 2
 
 
 <div class="gallery" style="display: flex; justify-content: center; margin-top: 2rem;">
-  <img src="/assets/img/cover.jpg" alt="Gallery Image 1" style="width: 600px; height: auto; border-radius: 10px;">
+  <img src="/assets/img/cover.jpg" alt="Gallery Image 1" style="width: 400px; height: auto; border-radius: 10px;">
 </div>
+

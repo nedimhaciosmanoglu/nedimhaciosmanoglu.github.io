@@ -17,7 +17,7 @@ For detailed information about my education, experience, publications, and achie
 
 <div class="cv-download">
   <a href="{{ '/assets/pdf/' | append: page.cv_pdf | relative_url}}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-    <i class="fas fa-file-pdf"></i> Download Complete CV (PDF)
+    <i class="fas fa-file-pdf"></i>  CV (PDF)
   </a>
 </div>
 

@@ -16,7 +16,9 @@ nav_order: 2
 </div>
 
  <!-- Gallery Section -->
-<div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
-  <img src="/assets/img/cover.jpg" alt="Gallery Image 1" style="width: 100%; height: 1200px; object-fit: cover; border-radius: 10px;">
-</div>
 
+<div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
+  <img src="/assets/img/cover.jpg" alt="Gallery Image 1" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;">
+  <img src="/assets/img/cover2.jpg" alt="Gallery Image 2" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;">
+  <img src="/assets/img/cover3.jpg" alt="Gallery Image 3" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;">
+</div>

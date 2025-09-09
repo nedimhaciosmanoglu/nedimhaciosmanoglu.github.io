@@ -44,6 +44,13 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/nedimhaciosmanoglu", "_blank");
         },
       },{
+        id: 'social-medium',
+        title: 'Medium',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://medium.com/@haciosmanoglunedim your Medium username", "_blank");
+        },
+      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
@@ -56,6 +63,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=yKUOmmUAAAAJ&hl", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/nedimhosmanoglu", "_blank");
         },
       },{
       id: 'light-theme',

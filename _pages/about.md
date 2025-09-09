@@ -19,7 +19,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-<div style="text-align: justify; padding-top: 40px;">
+<div style="text-align: left; padding-top: 40px;">
   <p>I am a dedicated and inquisitive scientist with over ten years of experience in project management and laboratory research.</p>
 
   <p>My work spans the de novo design of biological systems to bio-electronic or 3D printed interfaces, resulting in multiple publications and recognition in national/international projects.</p>
@@ -34,6 +34,6 @@ announcements:
   <div style="text-align: center; margin-top: 2rem;">
     <img src="/assets/img/my_protein_figure.png" 
          alt="Bottom Image" 
-         style="width: 500px; height: 300px; object-fit: cover; border-radius: 10px;">
+         style="width: 700px; height: 300px; object-fit: cover; border-radius: 10px;">
   </div>
 </div>

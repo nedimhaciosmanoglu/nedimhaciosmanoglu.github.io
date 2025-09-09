@@ -31,7 +31,7 @@ announcements:
   <p>Feel free to explore my socials!</p>
 
   <!-- Bottom Image -->
-<div style="text-align: left; margin-top: 2rem;">
+<div style="text-align: left; margin-top: 1rem;">
   <img src="/assets/img/my_protein_figure.png" 
        alt="Bottom Image" 
        style="width: 100%; max-width: 700px; height: auto; object-fit: cover; border-radius: 10px; float: left;">

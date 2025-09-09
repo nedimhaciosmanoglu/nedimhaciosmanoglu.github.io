@@ -43,12 +43,7 @@ ninja.data = [{
           section: "News",},{id: "news-continuing-postdoctoral-studies-i̇nci-lab-bilkent-university-unam",
           title: 'Continuing Postdoctoral studies @İnci Lab - Bilkent University - UNAM',
           description: "",
-          section: "News",},{id: "projects-prove-pack",
-          title: 'PROVE-PACK',
-          description: "Engineering probiotic membrane vesicles",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{
+          section: "News",},{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',

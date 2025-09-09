@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "Bilkent University, Postdoctoral Researcher, National Institute of Materials Science and Nanotechnology"
+subtitle: "<a href='#'><strong>Bilkent University, Postdoctoral Researcher</strong></a>, <strong>National Institute of Materials Science and Nanotechnology</strong>"
 
 profile:
   align: right

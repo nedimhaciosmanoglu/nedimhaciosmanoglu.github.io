@@ -28,5 +28,5 @@ announcements:
 
   <p>In my free time, I enjoy exploring musical genres, building DIY devices, and exploring nature.</p>
 
-  <p>Feel free to explore my web page!</p>
+  <p>Feel free to explore my socials!</p>
 </div>

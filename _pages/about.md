@@ -34,6 +34,6 @@ announcements:
   <div style="text-align: center; margin-top: 2rem;">
     <img src="/assets/img/my_protein_figure.png" 
          alt="Bottom Image" 
-         style="width: 700px; height: 300px; object-fit: cover; border-radius: 10px;">
+         style="width: 500px; height: 300px; object-fit: cover; border-radius: 10px;">
   </div>
 </div>

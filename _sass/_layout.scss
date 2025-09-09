@@ -51,3 +51,19 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+// Footer styling
+footer.fixed-bottom {
+  background-color: var(--global-theme-color) !important;
+  border-top: 1px solid var(--global-theme-color);
+}
+
+footer.fixed-bottom * {
+  color: var(--global-bg-color) !important;
+}
+
+// Dark mode footer
+html[data-theme='dark'] footer.fixed-bottom {
+  background-color: var(--global-theme-color-dark) !important;
+  border-top: 1px solid var(--global-theme-color-dark);
+}

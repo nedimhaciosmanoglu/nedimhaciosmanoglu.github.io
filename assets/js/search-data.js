@@ -55,7 +55,7 @@ ninja.data = [{
         title: 'Medium',
         section: 'Socials',
         handler: () => {
-          window.open("https://medium.com/@haciosmanoglunedim your Medium username", "_blank");
+          window.open("https://medium.com/@haciosmanoglunedim", "_blank");
         },
       },{
         id: 'social-rss',

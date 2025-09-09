@@ -36,10 +36,16 @@ For detailed information about my education, experience, publications, and achie
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+
+  background-color: #007BFF; /* Button background */
+  color: #fff; /* Text color */
+  border: none; /* Removes border */
 }
 
 .cv-download .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  background-color: #0056b3; /* Darker on hover */
 }
 </style>

@@ -56,8 +56,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-finished-my-phd",
-          title: 'Finished my PhD! 🦾 👨‍🔬',
+            },},{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
+          title: 'PhD defended. Officially Dr. Nedim Hacıosmanoğlu 🦾 👨‍🔬',
           description: "",
           section: "News",},{id: "projects-prove-pack",
           title: 'PROVE-PACK',

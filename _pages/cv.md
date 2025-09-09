@@ -37,7 +37,7 @@ For detailed information about my education, experience, publications, and achie
   gap: 0.5rem;
   transition: all 0.3s ease;
 
-  background-color: #007BFF; /* Button background */
+  background-color: #ed4a4a; /* Button background */
   color: #fff; /* Text color */
   border: none; /* Removes border */
 }

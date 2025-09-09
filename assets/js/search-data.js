@@ -37,12 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
+        },{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
           title: 'PhD defended. Officially Dr. Nedim Hacıosmanoğlu 🦾 👨‍🔬',
           description: "",
           section: "News",},{id: "news-continuing-postdoctoral-studies-i̇nci-lab-bilkent-university-unam",

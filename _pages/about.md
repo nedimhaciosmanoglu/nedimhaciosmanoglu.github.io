@@ -7,7 +7,8 @@ subtitle: "<a href='#'><strong>Bilkent University, Postdoctoral Researcher</stro
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  second_image: 3.jpg
+  image_circular: true
   more_info: 
 
 social: true # includes social icons at the bottom of the page
@@ -16,7 +17,6 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
-
 ---
 
 <div style="text-align: justify;">
@@ -29,4 +29,11 @@ announcements:
   <p>In my free time, I enjoy exploring musical genres, building DIY devices, and exploring nature.</p>
 
   <p>Feel free to explore my socials!</p>
+
+  <!-- Bottom Image -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <img src="/assets/img/my_protein_figure.png" 
+         alt="Bottom Image" 
+         style="width: 700px; height: 400px; object-fit: cover; border-radius: 10px;">
+  </div>
 </div>

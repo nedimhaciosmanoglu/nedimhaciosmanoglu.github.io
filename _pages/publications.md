@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
-description: Please refer to my Google Scholar profile for a comprehensive list of my publications, including journal articles, book chapters, and patents.
+title: "<strong>Publications</strong>"
+description: "<span style='font-size:1.25rem;'>Please refer to my Google Scholar profile for a comprehensive list of my publications, including journal articles, book chapters, and patents.</span>"
 nav: true
 nav_order: 2
 ---
@@ -15,3 +15,7 @@ nav_order: 2
   </p>
 </div>
 
+ <!-- Gallery Section -->
+<div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
+  <img src="/assets/img/cover.jpg" alt="Gallery Image 1" style="width: 100%; height: 1400px; object-fit: cover; border-radius: 10px;">
+</div>

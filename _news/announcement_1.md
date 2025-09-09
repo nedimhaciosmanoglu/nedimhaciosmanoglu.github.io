@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Finished my PhD! 🦾 👨‍🔬 
+PhD defended. Officially Dr. Nedim Hacıosmanoğlu 🦾 👨‍🔬 

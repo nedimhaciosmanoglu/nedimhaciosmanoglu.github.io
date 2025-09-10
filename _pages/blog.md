@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: "<strong>Blog</strong>"
+title: "Blog"
 nav: true
 nav_order: 1
 ---
@@ -28,4 +28,5 @@ nav_order: 1
   <img src="/assets/img/pic2.png" alt="Gallery Image 2" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;">
   <img src="/assets/img/pic3.png" alt="Gallery Image 3" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;">
 </div>
+
 

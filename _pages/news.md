@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "<strong>News</strong>"
+title: "News"
 permalink: /news/
 nav: true
 nav_order: 5

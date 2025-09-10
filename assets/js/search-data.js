@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-publications",
-          title: "Publications",
+        },{id: "nav-lt-strong-gt-publications-lt-strong-gt",
+          title: "&lt;strong&gt;Publications&lt;/strong&gt;",
           description: "Please refer to my Google Scholar profile for a comprehensive list of my publications, including journal articles, book chapters, and patents.",
           section: "Navigation",
           handler: () => {
@@ -30,8 +30,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-news",
-          title: "News",
+        },{id: "nav-lt-strong-gt-news-lt-strong-gt",
+          title: "&lt;strong&gt;News&lt;/strong&gt;",
           description: "",
           section: "Navigation",
           handler: () => {

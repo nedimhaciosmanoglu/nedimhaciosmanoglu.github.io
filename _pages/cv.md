@@ -13,11 +13,11 @@ cv_pdf: example_pdf.pdf
 Postdoctoral Researcher  
 Bilkent University & National Institute of Materials Science and Nanotechnology
 
-For detailed information about my education, experience, publications, and achievements, please download my complete CV below.
+For detailed information about my education, experience, and achievements, please download my complete CV below.
 
 <div class="cv-download">
   <a href="{{ '/assets/pdf/' | append: page.cv_pdf | relative_url}}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-    <i class="fas fa-file-pdf"></i>  CV (PDF)
+    <i class="fas fa-file-pdf"></i>  CV File (PDF)
   </a>
 </div>
 

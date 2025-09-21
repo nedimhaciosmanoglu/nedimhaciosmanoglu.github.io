@@ -9,7 +9,7 @@ cv_pdf: example_pdf.pdf
 
 ## Curriculum Vitae
 
-**Nedim Hacıosmanoğlu, PhD**  
+**Nedim Hacıosmanoğlu, Ph.D.**  
 Postdoctoral Researcher  
 Bilkent University & National Institute of Materials Science and Nanotechnology
 

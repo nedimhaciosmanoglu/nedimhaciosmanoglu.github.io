@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   <!-- Head -->
   <head>
     {% if page.redirect %}
@@ -14,7 +15,7 @@
     {% endif %}
     {% include head.liquid %}
   </head>
-
+<script src="{{ '/assets/js/upvotes.js' | relative_url }}"></script>
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->

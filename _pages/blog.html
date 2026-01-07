@@ -2,17 +2,33 @@
 layout: page
 title: Blog
 permalink: /blog/
+nav: true
+nav_order: 4
 ---
-
 <div class="posts-grid">
-{% for post in site.posts %}
-  <div class="post-card">
-    {% if post.thumbnail %}
-      <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
-    {% endif %}
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p>{{ post.excerpt }}</p>
-    <button class="upvote" data-slug="{{ post.slug }}">👍 <span>0</span></button>
-  </div>
-{% endfor %}
+  {% for post in site.posts %}
+  <article class="post-card">
+  {% if post.thumbnail %}
+  <a href="{{ post.url | relative_url }}" class="post-thumb-link">
+    <div class="post-thumb">
+      <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}">
+    </div>
+  </a>
+{% endif %}
+
+    <div class="post-content">
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+
+      <p class="post-meta">
+        {{ post.date | date: "%B %d, %Y" }}
+      </p>
+
+      <p class="post-excerpt">
+        {{ post.excerpt | strip_html | truncate: 120 }}
+      </p>
+    </div>
+  </article>
+  {% endfor %}
 </div>

@@ -1,20 +1,10 @@
+```markdown
 ---
-layout: default
+layout: blog
 permalink: /blog/
-title: "Blog"
+title: Blog
+description: My open, trilingual notebook of random thoughts on science, ramen, and everything in between.
 nav: true
-nav_order: 1
+nav_order: 2
 ---
-
-<div class="post">
-  <div class="header-bar">
-    <h1>Blog</h1>
-    <p style="font-weight: bold; font-size: 1.5rem;">
-  My open, trilingual notebook of random thoughts on science, ramen, and everything in between.
-</p>
-  </div>
-
-
-
-
-
+```

@@ -1,0 +1,256 @@
+```html
+---
+layout: default
+---
+
+
+  
+    {{ page.title }}
+    {% if page.description %}
+    {{ page.description }}
+    {% endif %}
+  
+
+  
+    
+      {% bibliography_template %}
+        
+          
+            {% if entry.preview %}
+              
+            {% elsif entry.journal %}
+              
+                {{ entry.journal | truncate: 30 }}
+              
+            {% else %}
+              
+                Publication
+              
+            {% endif %}
+            
+            {% if entry.pdf %}
+              
+                
+                  
+                    
+                    
+                    
+                    
+                  
+                  PDF
+                
+              
+            {% endif %}
+          
+          
+          
+            {{ entry.title }}
+            {{ entry.author }}
+            
+              {% if entry.journal %}
+                {{ entry.journal }}{% if entry.year %}, {{ entry.year }}{% endif %}
+              {% elsif entry.booktitle %}
+                {{ entry.booktitle }}{% if entry.year %}, {{ entry.year }}{% endif %}
+              {% endif %}
+            
+            
+            
+              {% if entry.html %}
+                Paper
+              {% endif %}
+              {% if entry.doi %}
+                DOI
+              {% endif %}
+              {% if entry.arxiv %}
+                arXiv
+              {% endif %}
+              {% if entry.code %}
+                Code
+              {% endif %}
+            
+          
+        
+      {% endbibliography_template %}
+    
+  
+
+
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.publication-card {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.publication-cover {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.journal-cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.journal-cover.default {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.journal-name {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.publication-card:hover .cover-overlay {
+  opacity: 1;
+}
+
+.btn-pdf {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--global-theme-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn-pdf:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+.publication-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-title {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  color: var(--global-text-color);
+}
+
+.publication-authors {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.publication-venue {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.publication-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.pub-link {
+  padding: 0.3rem 0.8rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+  transition: all 0.3s;
+}
+
+.pub-link:hover {
+  background: var(--global-theme-color);
+  color: white;
+  border-color: var(--global-theme-color);
+}
+
+@media (max-width: 1200px) {
+  .publications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .publications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .publication-cover {
+    height: 200px;
+  }
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Make publication cards clickable to DOI
+  document.querySelectorAll('.publication-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (!e.target.closest('a')) {
+        const doi = this.dataset.doi;
+        if (doi) {
+          window.open(`https://doi.org/${doi}`, '_blank');
+        }
+      }
+    });
+  });
+});
+
+```

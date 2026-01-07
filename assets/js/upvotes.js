@@ -1,0 +1,1 @@
+document.querySelectorAll(".upvote").forEach((t=>{const e=t.dataset.slug,o=t.querySelector("span"),n=localStorage.getItem(e)||0;o.textContent=n,t.onclick=()=>{const t=Number(o.textContent)+1;o.textContent=t,localStorage.setItem(e,t)}}));

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "**Lets Start**"
+title: "Lets Start"
 date: 2026-01-07 10:00:00
 description: "A brief description of your post"
 tags: [introduction]

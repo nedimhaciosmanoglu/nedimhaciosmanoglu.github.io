@@ -1,0 +1,14 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+<div class="pubs-grid">
+{% for pub in site.data.publications %}
+<a href="{{ pub.url }}" target="_blank" class="pub-item">
+  <img src="{{ pub.cover }}" alt="{{ pub.title }}">
+  <p>{{ pub.title }}</p>
+</a>
+{% endfor %}
+</div>

@@ -1,0 +1,1 @@
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.post-card{border:1px solid #ddd;padding:1rem;border-radius:8px}.pubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.pub-item img{width:100%}

@@ -77,6 +77,30 @@
   color: var(--global-text-color);
   margin-top: auto;
 }
+/* ================================
+   BLOG HEADER
+================================ */
+
+.blog-header {
+  margin-bottom: 2rem;
+}
+
+.blog-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.blog-welcome {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+.blog-separator {
+  border: none;
+  border-top: 1px solid #ddd;
+}
 
 /* ================================
    RESPONSIVE
@@ -86,4 +110,89 @@
   .post-thumb {
     height: 180px;
   }
+}
+/* ================================
+   PUBLICATIONS HEADER
+================================ */
+
+.publications-title {
+  font-size: 2.6rem;
+  font-weight: 800;   /* same as Blog */
+  margin-bottom: 0.4rem;
+}
+
+.publications-welcome {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+.publications-separator {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+/* ================================
+   PUBLICATIONS GRID (BLOG-LIKE)
+================================ */
+
+.pubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card box */
+.pub-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Thumbnail container */
+.pub-thumb {
+  width: 100%;
+  height: 300px;
+  background: #f7f7f7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image fully visible */
+.pub-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Divider like Blog */
+.pub-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0.8rem 0;
+}
+
+/* Citation text */
+.pub-citation {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #222 !important;
+}
+
+
+/* Publication title / citation text */
+.pub-citation {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222;
+  font-style: italic;     /* ⬅ italic */
+  text-align: center;  
 }

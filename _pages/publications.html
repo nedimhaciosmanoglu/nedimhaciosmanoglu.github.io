@@ -1,16 +1,48 @@
 ---
-layout: page
+layout: default
 title: Publications
 permalink: /publications/
 nav: true
 nav_order: 3
 ---
 
+<header class="publications-header">
+  <h1 class="publications-title">Publications</h1>
+
+  <p class="publications-welcome">
+    Selected peer-reviewed journal articles and conference papers.
+  </p>
+
+  <!-- Google Scholar link (moved from About) -->
+  <p class="publications-scholar">
+    👉 <a href="https://scholar.google.com/citations?user=yKUOmmUAAAAJ&hl=tr"
+         target="_blank"
+         rel="noopener">
+      Explore my publications and citation metrics on Google Scholar
+    </a>
+  </p>
+
+  <hr class="publications-separator">
+</header>
+
 <div class="pubs-grid">
-{% for pub in site.data.publications %}
-<a href="{{ pub.url }}" target="_blank" class="pub-item">
-  <img src="{{ pub.cover }}" alt="{{ pub.title }}">
-  <p>{{ pub.title }}</p>
-</a>
-{% endfor %}
+  {% for pub in site.data.publications %}
+    <article class="pub-card">
+      <a href="{{ pub.url }}" target="_blank" class="pub-thumb-link">
+        <div class="pub-thumb">
+          <img
+            src="{{ pub.cover | relative_url }}"
+            alt="{{ pub.title }}">
+        </div>
+      </a>
+
+      <hr class="pub-divider">
+
+      <div class="pub-content">
+        <p class="pub-citation">
+          {{ pub.title }}
+        </p>
+      </div>
+    </article>
+  {% endfor %}
 </div>

@@ -1,3 +1,8 @@
-- title: Example Journal Paper
-  cover: /assets/img/journal1.jpg
-  url: https://example.com
+- title: Revolutionizing IBD research with on-chip models of disease modeling and drug screening, 2025
+  cover: /assets/img/cover.jpg
+  url: https://www.cell.com/trends/biotechnology/abstract/S0167-7799(24)00284-1?dgcid=raven_jbs_etoc_email
+
+- title: In-Field Detection of Plant Pathogens Using Three-Dimensional-Printed Microneedles and a Portable Platform, 2025
+  cover: /assets/img/se5c02361_0001.webp
+  url: https://pubs.acs.org/doi/full/10.1021/acssensors.5c02361
+

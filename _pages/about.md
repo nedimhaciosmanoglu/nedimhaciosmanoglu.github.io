@@ -3,7 +3,8 @@ layout: about
 title: "<strong>About</strong>"
 permalink: /
 subtitle: "<a href='#'><strong>Bilkent University, Postdoctoral Researcher</strong></a>, <strong>National Institute of Materials Science and Nanotechnology</strong>"
-
+nav: false
+nav_order: 1
 profile:
   align: right
   image: prof_pic.jpg

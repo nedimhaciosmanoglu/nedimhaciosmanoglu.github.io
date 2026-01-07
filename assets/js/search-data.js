@@ -16,7 +16,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
+        },{id: "post-introduction",
+        
+          title: "Introduction",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Introduction/";
+          
+        },
+      },{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
           title: 'PhD defended. Officially Dr. Nedim Hacıosmanoğlu 🦾 👨‍🔬',
           description: "",
           section: "News",},{id: "news-continuing-postdoctoral-studies-i̇nci-lab-bilkent-university-unam",

@@ -1,0 +1,302 @@
+```html
+---
+layout: default
+---
+
+
+  
+    {{ page.title }}
+    {% if page.description %}
+    {{ page.description }}
+    {% endif %}
+  
+
+  
+    {{ content }}
+
+    
+      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+      {% for post in sorted_posts %}
+        
+          
+            {% if post.thumbnail %}
+              
+            {% elsif post.image %}
+              
+            {% else %}
+              
+            {% endif %}
+          
+          
+          
+            
+              {{ post.date | date: "%B %d, %Y" }}
+              {% if post.categories %}
+                {% for category in post.categories %}
+                  {{ category }}
+                {% endfor %}
+              {% endif %}
+            
+            
+            
+              {{ post.title }}
+            
+            
+            
+              {% if post.excerpt %}
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+              {% else %}
+                {{ post.content | strip_html | truncatewords: 30 }}
+              {% endif %}
+            
+            
+            
+              Read more →
+              
+                
+                  
+                    
+                    
+                  
+                  0
+                
+              
+            
+          
+        
+      {% endfor %}
+    
+  
+
+
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.blog-card {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-placeholder-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  flex-wrap: wrap;
+}
+
+.blog-tag {
+  background: var(--global-theme-color);
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.blog-title a {
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.blog-title a:hover {
+  color: var(--global-theme-color);
+}
+
+.blog-excerpt {
+  color: var(--global-text-color-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.upvote-section {
+  display: flex;
+  align-items: center;
+}
+
+.upvote-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--global-text-color);
+}
+
+.upvote-btn:hover {
+  background: var(--global-theme-color);
+  color: white;
+  border-color: var(--global-theme-color);
+}
+
+.upvote-btn.upvoted {
+  background: var(--global-theme-color);
+  color: white;
+  border-color: var(--global-theme-color);
+}
+
+.upvote-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.upvote-btn.upvoted svg path {
+  fill: white;
+}
+
+.upvote-count {
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .blog-posts {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+// Upvote functionality with persistent storage
+document.addEventListener('DOMContentLoaded', function() {
+  const upvoteButtons = document.querySelectorAll('.upvote-btn');
+  
+  // Load upvote data from localStorage
+  function loadUpvotes() {
+    const upvotes = JSON.parse(localStorage.getItem('blogUpvotes') || '{}');
+    const userUpvotes = JSON.parse(localStorage.getItem('userUpvotes') || '[]');
+    
+    upvoteButtons.forEach(btn => {
+      const postId = btn.dataset.postId;
+      const count = upvotes[postId] || 0;
+      btn.querySelector('.upvote-count').textContent = count;
+      
+      if (userUpvotes.includes(postId)) {
+        btn.classList.add('upvoted');
+      }
+    });
+  }
+  
+  // Save upvote
+  function saveUpvote(postId, isUpvoted) {
+    const upvotes = JSON.parse(localStorage.getItem('blogUpvotes') || '{}');
+    const userUpvotes = JSON.parse(localStorage.getItem('userUpvotes') || '[]');
+    
+    if (isUpvoted) {
+      upvotes[postId] = (upvotes[postId] || 0) + 1;
+      userUpvotes.push(postId);
+    } else {
+      upvotes[postId] = Math.max(0, (upvotes[postId] || 0) - 1);
+      const index = userUpvotes.indexOf(postId);
+      if (index > -1) {
+        userUpvotes.splice(index, 1);
+      }
+    }
+    
+    localStorage.setItem('blogUpvotes', JSON.stringify(upvotes));
+    localStorage.setItem('userUpvotes', JSON.stringify(userUpvotes));
+    
+    return upvotes[postId];
+  }
+  
+  // Handle upvote clicks
+  upvoteButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const postId = this.dataset.postId;
+      const isCurrentlyUpvoted = this.classList.contains('upvoted');
+      const newCount = saveUpvote(postId, !isCurrentlyUpvoted);
+      
+      this.classList.toggle('upvoted');
+      this.querySelector('.upvote-count').textContent = newCount;
+    });
+  });
+  
+  loadUpvotes();
+  
+  // Make cards clickable
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (!e.target.closest('.upvote-btn')) {
+        const link = this.querySelector('.blog-title a');
+        if (link) {
+          window.location.href = link.href;
+        }
+      }
+    });
+  });
+});
+
+```

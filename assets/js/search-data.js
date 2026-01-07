@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "post-lets-start",
         
-          title: "Lets Start",
+          title: "**Lets Start**",
         
         description: "A brief description of your post",
         section: "Posts",

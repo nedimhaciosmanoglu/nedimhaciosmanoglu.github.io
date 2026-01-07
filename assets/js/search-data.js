@@ -16,11 +16,36 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "post-introduction",
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "post-lets-start",
         
-          title: "Introduction",
+          title: "Lets Start",
         
-        description: "",
+        description: "A brief description of your post",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Copy/";
+          
+        },
+      },{id: "post-lets-start",
+        
+          title: "Lets Start",
+        
+        description: "A brief description of your post",
         section: "Posts",
         handler: () => {
           

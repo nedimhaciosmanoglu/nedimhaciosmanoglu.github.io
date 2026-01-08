@@ -2,14 +2,28 @@
     initTheme();
   </script> <script src="/assets/js/upvotes.js"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Nedim Hacıosmanoğlu, PhD </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/"><strong>About</strong> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/news/">News </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item"> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <header class="blog-header"> <h1 class="blog-title">Blog</h1> <p class="blog-welcome"> Welcome to my blog — thoughts on science, engineering, and ideas in progress. </p> <hr class="blog-separator"> </header> <div class="posts-grid"> <article class="post-card" data-post-id="blog-2026-introduction"> <a href="/blog/2026/Introduction/" class="post-thumb-link" data-track-click="blog-2026-introduction"> <div class="post-thumb"> <img src="/assets/img/%5B089999%5D.jpg" alt="Lets Start"> </div> </a> <div class="post-content"> <h2 class="post-title"> <a href="/blog/2026/Introduction/" data-track-click="blog-2026-introduction">Lets Start</a> </h2> <p class="post-meta"> January 07, 2026 </p> <p class="post-excerpt"> Let’s see what I’ll be cooking up in the next chapter of my days, hopefully something more exciting than instant nood... </p> <div class="post-stats"> <span class="click-badge" data-post-id="blog-2026-introduction"> <svg width="16" height="16" viewbox="0 0 16 16" fill="currentColor"> <path d="M8 2a6 6 0 100 12A6 6 0 008 2zM4 8a4 4 0 118 0 4 4 0 01-8 0z"></path> <circle cx="8" cy="8" r="2"></circle> </svg> <span class="click-count">0</span> views </span> <button class="upvote-btn" data-post-id="blog-2026-introduction" aria-label="Upvote post"> <svg width="16" height="16" viewbox="0 0 16 16" fill="currentColor"> <path d="M8 2l3.5 7h-7L8 2z"></path> <rect x="6" y="9" width="4" height="5"></rect> </svg> <span class="upvote-count">0</span> </button> </div> </div> </article> </div> <style>.post-stats{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid #e0e0e0;font-size:.875rem;color:#666}.click-badge{display:flex;align-items:center;gap:.25rem}.upvote-btn{display:flex;align-items:center;gap:.25rem;background:0;border:1px solid #ddd;border-radius:4px;padding:.25rem .5rem;cursor:pointer;transition:all .2s;color:#666}.upvote-btn:hover{background:#f0f0f0;border-color:#999}.upvote-btn.upvoted{background:#e3f2fd;border-color:#2196f3;color:#2196f3}.upvote-btn:active{transform:scale(0.95)}</style> <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script> <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script> <script>
 // REPLACE THIS with your Firebase config from Step 3
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAGzemLGOqmV4SHzesxdUWdne6mRsR_das",
+  authDomain: "blog-5fdf8.firebaseapp.com",
+  databaseURL: "https://blog-5fdf8-default-rtdb.firebaseio.com",
+  projectId: "blog-5fdf8",
+  storageBucket: "blog-5fdf8.firebasestorage.app",
+  messagingSenderId: "735418985022",
+  appId: "1:735418985022:web:9eb8e084de999f9cef3f6f",
+  measurementId: "G-BYL92FSBV3"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 };
 
 // Initialize Firebase

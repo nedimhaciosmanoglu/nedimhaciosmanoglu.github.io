@@ -6,22 +6,18 @@ nav: true
 nav_order: 2
 hide_page_title: true
 ---
-
 <header class="blog-header">
   <h1 class="blog-title">Blog</h1>
-
   <p class="blog-welcome">
     Welcome to my blog — thoughts on science, engineering, and ideas in progress.
   </p>
-
   <hr class="blog-separator">
 </header>
-
 <div class="posts-grid">
   {% for post in site.posts %}
-    <article class="post-card">
+    <article class="post-card" data-post-id="{{ post.id | slugify }}">
       {% if post.thumbnail %}
-        <a href="{{ post.url | relative_url }}" class="post-thumb-link">
+        <a href="{{ post.url | relative_url }}" class="post-thumb-link" data-track-click="{{ post.id | slugify }}">
           <div class="post-thumb">
             <img
               src="{{ post.thumbnail | relative_url }}"
@@ -29,20 +25,166 @@ hide_page_title: true
           </div>
         </a>
       {% endif %}
-
       <div class="post-content">
         <h2 class="post-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}" data-track-click="{{ post.id | slugify }}">{{ post.title }}</a>
         </h2>
-
         <p class="post-meta">
           {{ post.date | date: "%B %d, %Y" }}
         </p>
-
         <p class="post-excerpt">
           {{ post.excerpt | strip_html | truncate: 120 }}
         </p>
+        <div class="post-stats">
+          <span class="click-badge" data-post-id="{{ post.id | slugify }}">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 2a6 6 0 100 12A6 6 0 008 2zM4 8a4 4 0 118 0 4 4 0 01-8 0z"/>
+              <circle cx="8" cy="8" r="2"/>
+            </svg>
+            <span class="click-count">0</span> views
+          </span>
+          <button class="upvote-btn" data-post-id="{{ post.id | slugify }}" aria-label="Upvote post">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 2l3.5 7h-7L8 2z"/>
+              <rect x="6" y="9" width="4" height="5"/>
+            </svg>
+            <span class="upvote-count">0</span>
+          </button>
+        </div>
       </div>
     </article>
   {% endfor %}
 </div>
+
+<style>
+.post-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.click-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.upvote-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.upvote-btn:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
+
+.upvote-btn.upvoted {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.upvote-btn:active {
+  transform: scale(0.95);
+}
+</style>
+
+<script>
+(async function() {
+  const posts = document.querySelectorAll('.post-card');
+  
+  // Load stats for all posts
+  for (const post of posts) {
+    const postId = post.dataset.postId;
+    await loadPostStats(postId);
+  }
+  
+  // Track clicks on post links
+  document.querySelectorAll('[data-track-click]').forEach(link => {
+    link.addEventListener('click', async function(e) {
+      const postId = this.dataset.trackClick;
+      await incrementClicks(postId);
+    });
+  });
+  
+  // Handle upvote buttons
+  document.querySelectorAll('.upvote-btn').forEach(btn => {
+    btn.addEventListener('click', async function(e) {
+      e.preventDefault();
+      const postId = this.dataset.postId;
+      await toggleUpvote(postId, this);
+    });
+  });
+  
+  async function loadPostStats(postId) {
+    try {
+      // Load click count
+      const clickData = await window.storage.get(`post:${postId}:clicks`, true);
+      const clicks = clickData ? parseInt(clickData.value) : 0;
+      const clickBadge = document.querySelector(`.click-badge[data-post-id="${postId}"] .click-count`);
+      if (clickBadge) clickBadge.textContent = clicks;
+      
+      // Load upvote count
+      const upvoteData = await window.storage.get(`post:${postId}:upvotes`, true);
+      const upvotes = upvoteData ? parseInt(upvoteData.value) : 0;
+      const upvoteBtn = document.querySelector(`.upvote-btn[data-post-id="${postId}"] .upvote-count`);
+      if (upvoteBtn) upvoteBtn.textContent = upvotes;
+      
+      // Check if current user has upvoted
+      const userUpvoted = await window.storage.get(`post:${postId}:upvoted`, false);
+      if (userUpvoted) {
+        document.querySelector(`.upvote-btn[data-post-id="${postId}"]`)?.classList.add('upvoted');
+      }
+    } catch (error) {
+      console.log('Stats not yet available for', postId);
+    }
+  }
+  
+  async function incrementClicks(postId) {
+    try {
+      const clickData = await window.storage.get(`post:${postId}:clicks`, true);
+      const currentClicks = clickData ? parseInt(clickData.value) : 0;
+      await window.storage.set(`post:${postId}:clicks`, (currentClicks + 1).toString(), true);
+    } catch (error) {
+      console.error('Error tracking click:', error);
+    }
+  }
+  
+  async function toggleUpvote(postId, button) {
+    try {
+      const userUpvoted = await window.storage.get(`post:${postId}:upvoted`, false);
+      const upvoteData = await window.storage.get(`post:${postId}:upvotes`, true);
+      let currentUpvotes = upvoteData ? parseInt(upvoteData.value) : 0;
+      
+      if (userUpvoted) {
+        // Remove upvote
+        currentUpvotes = Math.max(0, currentUpvotes - 1);
+        await window.storage.delete(`post:${postId}:upvoted`, false);
+        button.classList.remove('upvoted');
+      } else {
+        // Add upvote
+        currentUpvotes += 1;
+        await window.storage.set(`post:${postId}:upvoted`, 'true', false);
+        button.classList.add('upvoted');
+      }
+      
+      await window.storage.set(`post:${postId}:upvotes`, currentUpvotes.toString(), true);
+      button.querySelector('.upvote-count').textContent = currentUpvotes;
+    } catch (error) {
+      console.error('Error toggling upvote:', error);
+    }
+  }
+})();
+</script>

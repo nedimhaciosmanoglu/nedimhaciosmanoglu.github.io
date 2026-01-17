@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/quotes/";
           },
+        },{id: "nav-nedo-lab",
+          title: "Nedo Lab",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/quotes/";
+          },
         },{id: "post-lets-start",
         
           title: "Lets Start",

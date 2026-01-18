@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "News"
+title: News
 permalink: /news/
 nav: true
-nav_order: 2
+nav_order: 5
 ---
 
 {% include news.liquid %}

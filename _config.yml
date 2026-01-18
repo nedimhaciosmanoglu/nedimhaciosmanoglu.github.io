@@ -134,6 +134,11 @@ newsletter:
 collections:
   books:
     output: true
+  mindsnacks:
+    defaults:
+      layout: post
+    output: true
+    permalink: /mindsnacks/:path/
   news:
     defaults:
       layout: post

@@ -1,8 +1,48 @@
 ---
-layout: page
-title: "Quote Book"
+layout: default
+title: Quote Book
 permalink: /quotes/
 nav: true
-nav_order: 6
+nav_order: 7
+hide_page_title: true
 ---
 
+<header class="blog-header">
+  <h1 class="blog-title">Quote Book</h1>
+  <p class="blog-welcome">
+    A collection of meaningful quotes
+  </p>
+  <hr class="blog-separator">
+</header>
+
+{% for quote in site.quotes reversed %}
+  <article class="post-card" data-post-id="{{ quote.id | slugify }}">
+    <div class="post-content">
+      <h2 class="post-title">
+        <a href="{{ quote.url | relative_url }}">
+          {{ quote.title }}
+        </a>
+      </h2>
+      <p class="post-meta">
+        {{ quote.date | date: "%B %d, %Y" }}
+      </p>
+      <p class="post-excerpt">
+        {{ quote.excerpt | strip_html }}
+      </p>
+    </div>
+  </article>
+{% endfor %}
+
+<div class="quote-list">
+  <div class="quote-item">
+    <em>"Whatever you seek, seek it in yourself"</em> - <strong>Hünkar Hacı Bektaş Veli</strong>
+  </div>
+  
+  <hr>
+  
+  <div class="quote-item">
+    <em>"Science is the most reliable guide in life."</em> - <strong>Mustafa Kemal Atatürk</strong>
+  </div>
+</div>
+
+  <hr>

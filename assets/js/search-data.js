@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-strong-about-strong",
-    title: "<strong>About</strong>",
+    id: "nav-about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -15,6 +15,20 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
+          },
+        },{id: "nav-mind-snacks",
+          title: "Mind Snacks",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/mindsnacks/";
+          },
+        },{id: "nav-nedo-lab",
+          title: "Nedo Lab",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/nedolab/";
           },
         },{id: "nav-news",
           title: "News",
@@ -48,7 +62,12 @@ ninja.data = [{
             window.location.href = "/blog/2026/Introduction/";
           
         },
-      },{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
+      },{id: "mindsnacks-lazic-wars",
+          title: 'Lazic Wars',
+          description: "A Byzantine-Sasanian military conflict for dominance in the Caucasus region",
+          section: "Mindsnacks",handler: () => {
+              window.location.href = "/mindsnacks/2026-01-18-welcome-to-mind-snacks.md/";
+            },},{id: "news-phd-defended-officially-dr-nedim-hacıosmanoğlu",
           title: 'PhD defended. Officially Dr. Nedim Hacıosmanoğlu 🦾 👨‍🔬',
           description: "",
           section: "News",},{id: "news-continuing-postdoctoral-studies-i̇nci-lab-bilkent-university-unam",

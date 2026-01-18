@@ -10,16 +10,16 @@ hide_page_title: true
 <header class="blog-header">
   <h1 class="blog-title">Nedo Lab</h1>
   <p class="blog-welcome">
-    Future plan to establish Nedo Lab!
+    This page describes a prospective research laboratory, tentatively named Nedo Lab
   </p>
   <hr class="blog-separator">
 </header>
 
-<u><strong>## About Nedo Lab</strong></u>
+## <u>**About Nedo Lab**</u>
 
-Welcome to the Nedo Lab. Our lab focuses on the de novo design of biological systems and bio-electronic interfaces.
+Welcome to the Nedo Lab. We focus on the de novo design of biological systems and the interfaces that connect life with electronics.
 
-<u><strong>### Research Focus</strong></u>
+## <u>**Research Focus**</u>
 
 Our research spans:
 - De novo design of biological systems
@@ -27,23 +27,23 @@ Our research spans:
 - 3D printed biomedical devices
 - Novel biomaterial development
 
-<u><strong>### Current Projects</strong></u>
+## <u>**Current Projects**</u>
 
 Will be announced
 
-<u><strong>### Lab Resources</strong></u>
+## <u>**Lab Resources**</u>
 
-Will be announced
+Under negotiation with the future
 
-<u><strong>### Team</strong></u>
+## <u>**Team**</u>
 
-Coming soon...
+Scholars will be summoned to Nedo Lab when the crown (and funding) permits.
 
-<u><strong>### Publications</strong></u>
+## <u>**Publications**</u>
 
 See the main [publications page](/publications/) for lab-related research outputs.
 
-<u><strong>### Contact</strong></u>
+## <u>**Contact**</u>
 
 For inquiries about the lab, please contact:
 - Email: drnedimhaciosmanoglu@gmail.com

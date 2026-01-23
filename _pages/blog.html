@@ -10,9 +10,11 @@ hide_page_title: true
   <h1 class="blog-title">Blog</h1>
   <p class="blog-welcome">
     Welcome to my blog — thoughts on science, engineering, and ideas in progress. Have questions or comments? Reach out at <strong>drnedimhaciosmanoglu@gmail.com</strong>
+
   </p>
   <hr class="blog-separator">
 </header>
+
 <div class="posts-grid">
   {% for post in site.posts %}
     <article class="post-card" data-post-id="{{ post.id | slugify }}">
@@ -25,139 +27,24 @@ hide_page_title: true
           </div>
         </a>
       {% endif %}
+
       <div class="post-content">
         <h2 class="post-title">
           <a href="{{ post.url | relative_url }}" onclick="trackClick('{{ post.id | slugify }}')">
             {{ post.title }}
           </a>
         </h2>
+
         <p class="post-meta">
           {{ post.date | date: "%B %d, %Y" }}
         </p>
+
         <p class="post-excerpt">
           {{ post.excerpt | strip_html | truncate: 120 }}
         </p>
-        <div class="post-upvote">
-          <button class="upvote-btn" onclick="toggleUpvote('{{ post.id | slugify }}', event)">
-            <span class="upvote-icon">👍</span>
-            <span class="upvote-count" id="upvote-{{ post.id | slugify }}">-</span>
-          </button>
-        </div>
+
+        <!-- post-stats removed -->
       </div>
     </article>
   {% endfor %}
 </div>
-
-<script>
-// CONFIGURATION - No sensitive data here!
-const GITHUB_USERNAME = 'nedimhaciosmanoglu'; // e.g., 'yourusername'
-const GITHUB_REPO = 'nedimhaciosmanoglu.github.io'; // e.g., 'yourusername.github.io'
-const GIST_ID = '9c7efc9e10c9d34eb498ead7339ab596'; // The public gist that stores upvotes
-const GIST_FILENAME = 'blog-upvotes.json';
-
-// Initialize upvotes on page load
-document.addEventListener('DOMContentLoaded', function() {
-  loadAllUpvotes();
-});
-
-async function loadAllUpvotes() {
-  try {
-    const response = await fetch(`https://api.github.com/gists/${GIST_ID}`);
-    const data = await response.json();
-    
-    if (data.files && data.files[GIST_FILENAME]) {
-      const upvotes = JSON.parse(data.files[GIST_FILENAME].content);
-      
-      // Update all post displays
-      Object.keys(upvotes).forEach(postId => {
-        const countElement = document.getElementById(`upvote-${postId}`);
-        if (countElement) {
-          countElement.textContent = upvotes[postId];
-        }
-      });
-    }
-  } catch (error) {
-    console.error('Error loading upvotes:', error);
-  }
-}
-
-async function toggleUpvote(postId, event) {
-  event.preventDefault();
-  event.stopPropagation();
-  
-  const button = event.currentTarget;
-  button.disabled = true;
-  
-  try {
-    // Trigger the GitHub Actions workflow
-    const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/dispatches`,
-      {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/vnd.github+json',
-          'X-GitHub-Api-Version': '2022-11-28'
-        },
-        body: JSON.stringify({
-          event_type: 'blog-upvote',
-          client_payload: {
-            post_id: postId
-          }
-        })
-      }
-    );
-    
-    if (response.ok) {
-      // Reload upvotes after a short delay (workflow needs time to run)
-      setTimeout(() => {
-        loadAllUpvotes();
-      }, 2000);
-    } else {
-      alert('Error saving upvote. Please try again.');
-    }
-  } catch (error) {
-    console.error('Error updating upvote:', error);
-    alert('Error saving upvote. Please try again.');
-  } finally {
-    button.disabled = false;
-  }
-}
-</script>
-
-<style>
-.post-upvote {
-  margin-top: 12px;
-}
-
-.upvote-btn {
-  background: none;
-  border: 2px solid #ddd;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.upvote-btn:hover:not(:disabled) {
-  border-color: #999;
-  background-color: #f9f9f9;
-}
-
-.upvote-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.upvote-icon {
-  font-size: 16px;
-}
-
-.upvote-count {
-  font-weight: 600;
-  min-width: 20px;
-}
-</style>

@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "<a href='#'><strong>Bilkent University, Postdoctoral Researcher</strong></a>, <strong>National Institute of Materials Science and Nanotechnology</strong>"
+subtitle: "<a href='#'><strong>Assistant Professor, Ankara Medipol University</strong></a>, <strong>Faculty of Medicine, Department of Medical Biology</strong>"
 nav: false
 nav_order: 1
 profile:

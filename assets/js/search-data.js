@@ -73,6 +73,9 @@ ninja.data = [{
           section: "News",},{id: "news-continuing-postdoctoral-studies-i̇nci-lab-bilkent-university-unam",
           title: 'Continuing Postdoctoral studies @İnci Lab - Bilkent University - UNAM',
           description: "",
+          section: "News",},{id: "news-joined-as-assistant-professor-ankara-medipol-university-faculty-of-medicine-department-of-medical-biology",
+          title: 'Joined as Assistant Professor @ Ankara Medipol University - Faculty of Medicine, Department...',
+          description: "",
           section: "News",},{
         id: 'social-linkedin',
         title: 'LinkedIn',
